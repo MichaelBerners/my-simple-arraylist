@@ -390,35 +390,6 @@ public class MyArrayList<T> implements List<T> {
         }
     }
 
-    /**
-     * Метод приводящий фактический размер внутреннего массива к размеру списка. (capacity = size)
-     */
-    public void trimToSize() {
-        capacity = size;
-        Object[] newElements = new Object[capacity];
-        for (int i = 0; i < size; i++) {
-            newElements[i] = elementData[i];
-        }
-        elementData = newElements;
-    }
-
-    /***
-     * Метод позволяющий увеличить фактический размер внутреннего массива до заданной велечины (с сохранением элементов в нем)
-     * если список пустой - просто увеличивает размер внутреннего массива.
-     * @param newCapacity - емкость до которой требуется увеличить внутренний массив
-     */
-    public void ensureCapacity(int newCapacity) {
-        capacity = newCapacity;
-        Object[] newObjects = new Object[capacity];
-        if (size == 0) {
-            elementData = newObjects;
-            return;
-        }
-        for (int i = 0; i < size; i++) {
-            newObjects[i] = elementData[i];
-        }
-        elementData = newObjects;
-    }
 
     /**
      * Внутренний класс реализующий интерфес Iterator

@@ -3,6 +3,7 @@ package ru.belonogov.arraylist;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import java.util.Iterator;
 import java.util.List;
 
 import static org.assertj.core.api.Assertions.*;
@@ -75,6 +76,12 @@ class MyArrayListTest {
         for(int i = 0; i < myArrayList.size(); i++) {
             assertThat(myArrayList.get(i)).isNull();
         }
+    }
+
+    @Test
+    void iterator() {
+        Iterator<Integer> iterator = myArrayList.iterator();
+        assertThat(iterator).isNotNull().isInstanceOf(Iterator.class);
     }
 
 }
