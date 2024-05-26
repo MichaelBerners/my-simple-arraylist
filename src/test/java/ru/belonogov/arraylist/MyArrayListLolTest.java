@@ -76,6 +76,6 @@ class MyArrayListLolTest {
     @Test
     void subList() {
         List<Integer> integerList = myArrayList.subList(2, 4);
-        Assertions.assertThat(integerList).isNull();
+        Assertions.assertThat(integerList).isEqualTo(List.of());
     }
 }
