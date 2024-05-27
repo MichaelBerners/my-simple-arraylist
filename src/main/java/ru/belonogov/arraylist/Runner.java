@@ -9,7 +9,6 @@ import java.util.Random;
 public class Runner {
 
     public static void main(String[] args) {
-
         List<Integer> myArrayList = initList(1_000);
         myArrayList.sort((a, b) -> a - b);
         myArrayList.stream().forEach(System.out::println);
