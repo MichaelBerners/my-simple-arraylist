@@ -8,6 +8,8 @@ import java.util.*;
  */
 public class MyArrayList<T> implements List<T> {
 
+    private int lol;
+
     /**
      * массив хранимых объектов
      */
